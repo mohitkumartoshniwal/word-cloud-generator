@@ -1,4 +1,7 @@
 import { FaGithub, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
+
 import Configuration from "./components/Configuration";
 import { WordCloud } from "./components/WordCloud";
 
@@ -41,6 +44,8 @@ const App = () => {
       //   console.log(`onWordClick: ${d.text}`);
       // }}
       />
+      <Analytics />
+      <SpeedInsights />
     </div>
   );
 };
