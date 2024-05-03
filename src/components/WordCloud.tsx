@@ -45,7 +45,7 @@ const defaultScaleOrdinal = scaleOrdinal(schemeCategory10);
 const _WordCloud = ({
   // font = "serif",
   fontSize = (d) => d.value,
-  rotate = () => (~~(Math.random() * 6) - 3) * 30,
+  rotate = () => Math.random() * 120 - 60,
   spiral = "archimedean",
   padding = 2,
   random = Math.random,
@@ -218,7 +218,10 @@ const _WordCloud = ({
   }, [dimensions.width, dimensions.height, generatedData]);
 
   return (
-    <svg ref={svgRef} className="wordcloud-container border-2 rounded-sm" />
+    <svg
+      ref={svgRef}
+      className="wordcloud-container border-2 rounded-sm shadow-lg"
+    />
   );
 };
 

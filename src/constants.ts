@@ -80,3 +80,19 @@ export type FontType = (typeof fonts)[number];
 export const DOWNLOAD_FORMATS = ["png", "jpeg", "svg"] as const;
 
 export type DownloadFormatType = (typeof DOWNLOAD_FORMATS)[number];
+
+export const initalCloudData = `
+A word cloud visually represents the frequency of words in a text document, with more frequent words appearing larger and less frequent ones smaller. It's often used in data analysis, content summarization, and visualization.
+
+Use Case: Sentiment Analysis of Product Reviews
+
+Imagine you're analyzing customer reviews of a product to understand sentiments. You have a large dataset of reviews and want to quickly identify the most common themes mentioned by customers.
+
+Data Collection: Gather customer reviews from various sources, such as online platforms or surveys.
+Text Processing: Clean the text data by removing punctuation, stop words, and irrelevant terms.
+Word Frequency Analysis: Count the frequency of each word in the reviews. Words like "great", "quality", or "service" might appear more frequently in positive reviews, while "poor", "problem", or "slow" might appear more in negative ones.
+Word Cloud Generation: Generate a word cloud based on the word frequency data. The size of each word in the cloud corresponds to its frequency in the reviews. Common themes or frequently mentioned aspects of the product will appear larger and more prominent.
+Visualization: Display the word cloud to visualize the most common words or themes. This provides a quick overview of customer sentiments and allows you to identify key areas for improvement or strengths of the product.
+Insights and Action: Analyze the word cloud to gain insights into customer opinions. For example, if the word "excellent" appears prominently, it indicates positive feedback on product quality. Conversely, if "issues" or "broken" stand out, it suggests areas needing attention.
+By using a word cloud in this scenario, you can efficiently summarize large volumes of text data, identify patterns, and make data-driven decisions to enhance product quality or address customer concerns.
+`;

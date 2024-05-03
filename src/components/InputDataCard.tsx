@@ -9,14 +9,19 @@ import {
   CardTitle,
 } from "./ui/card";
 import { Textarea } from "./ui/textarea";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { generateWordCloud } from "@/utils";
+import { initalCloudData } from "@/constants";
 
 const InputDataCard = () => {
-  const [inputData, setInputData] = useState("");
+  const [inputData, setInputData] = useState(initalCloudData);
   const { setProcessedData, removeNumbers, removeSpecialChars } =
     useWordCloud();
+
+  useEffect(() => {
+    processData();
+  }, []);
 
   function handleChange(e: React.ChangeEvent<HTMLTextAreaElement>) {
     setInputData(e.target.value);
